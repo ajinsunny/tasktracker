@@ -5,7 +5,11 @@
       title="Task Tracker"
       :showAddTask="showAddTask"
     />
-    <router-view @toggle-add-task="toggleAddTask" :showAddTask="showAddTask" />
+
+    <router-view
+      @toggle-add-task="toggleAddTask"
+      :show-add-task="showAddTask"
+    />
 
     <AppFooter />
   </div>
