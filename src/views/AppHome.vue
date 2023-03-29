@@ -1,5 +1,5 @@
 <template>
-  <Tasks
+  <TheTasks
     @toggle-reminder="toggleReminder"
     @delete-task="deleteTask"
     :tasks="tasks"
@@ -9,7 +9,8 @@
 
 <script>
 import AddTask from "../components/AddTask.vue";
-import Tasks from "../components/Tasks.vue";
+import TheTasks from "../components/Tasks.vue";
+import tasks from "../db.json";
 
 export default {
   name: "AppHome",
@@ -17,7 +18,7 @@ export default {
     showAddTask: Boolean,
   },
   components: {
-    Tasks,
+    TheTasks,
     AddTask,
   },
   data() {
@@ -69,11 +70,7 @@ export default {
       );
     },
     async fetchTasks() {
-      const res = await fetch("api/tasks");
-
-      const data = await res.json();
-
-      return data;
+      return tasks;
     },
     async fetchTask(id) {
       const res = await fetch(`api/tasks/${id}`);
