@@ -5,7 +5,7 @@
       title="Task Tracker"
       :showAddTask="showAddTask"
     />
-
+    <AddTask v-if="showAddTask" @add-task="addTask" />
     <router-view
       @toggle-add-task="toggleAddTask"
       :show-add-task="showAddTask"
