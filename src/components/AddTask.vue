@@ -36,7 +36,7 @@ export default {
 
       const newTask = {
         text: this.text,
-        day: this.day,
+        day: this.date,
         reminder: this.reminder,
       };
 
