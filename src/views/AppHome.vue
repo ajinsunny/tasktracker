@@ -10,7 +10,7 @@
 <script>
 import AddTask from "../components/AddTask.vue";
 import TheTasks from "../components/Tasks.vue";
-import tasks from "../db.json";
+import tasks from "../../db.json";
 
 export default {
   name: "AppHome",
