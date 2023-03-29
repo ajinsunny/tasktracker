@@ -33,6 +33,10 @@ export default {
   methods: {
     toggleAddTask() {
       this.showAddTask = !this.showAddTask;
+      this.$router.push({
+        path: "/",
+        query: { showAddTask: this.showAddTask },
+      }); // Add this line
     },
   },
 };
