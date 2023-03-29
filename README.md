@@ -1,6 +1,6 @@
 # Task Tracker
 
-![](https://github.com/ajinsunny/framer-motion/blob/master/boxanimation1.gif)
+![](https://github.com/ajinsunny/tasktracker/blob/master/tasktrackerimage.png)
 
 
 ## Project setup
