@@ -1,49 +1,40 @@
 <template>
   <div class="container">
-    <AppHeader
+    <Header
       @toggle-add-task="toggleAddTask"
       title="Task Tracker"
       :showAddTask="showAddTask"
     />
-    <AddTask v-if="showAddTask" @add-task="addTask" />
-    <router-view
-      @toggle-add-task="toggleAddTask"
-      :show-add-task="showAddTask"
-    />
-
-    <AppFooter />
+    <router-view :showAddTask="showAddTask"></router-view>
+    <Footer />
   </div>
 </template>
 
 <script>
-import AppHeader from "./components/Header";
-import AppFooter from "./components/AppFooter";
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    AppHeader,
-    AppFooter,
+    Header,
+    Footer,
   },
   data() {
     return {
       showAddTask: false,
-    };
+    }
   },
   methods: {
     toggleAddTask() {
-      this.showAddTask = !this.showAddTask;
-      this.$router.push({
-        path: "/",
-        query: { showAddTask: this.showAddTask },
-      }); // Add this line
+      this.showAddTask = !this.showAddTask
     },
   },
-};
+}
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
 
 * {
   box-sizing: border-box;
@@ -52,7 +43,7 @@ export default {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {

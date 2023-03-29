@@ -1,18 +1,23 @@
-import { createRouter, createWebHistory } from "vue-router";
-import AppHome from "../views/AppHome.vue";
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home'
+import About from '../views/About'
 
 const routes = [
   {
-    path: "/",
-    name: "AppHome",
-    component: AppHome,
-    props: (route) => ({ showAddTask: route.query.showAddTask === "true" }), // Pass the showAddTask prop here
+    path: '/',
+    name: 'Home',
+    component: Home,
   },
-];
+  {
+    path: '/about',
+    name: 'About',
+    component: About,
+  },
+]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
-});
+})
 
-export default router;
+export default router

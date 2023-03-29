@@ -13,11 +13,11 @@
 
 <script>
 export default {
-  name: "TheTask",
+  name: 'Task',
   props: {
     task: Object,
   },
-};
+}
 </script>
 
 <style scope>

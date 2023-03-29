@@ -5,7 +5,7 @@
 
 <script>
 export default {
-  name: "AppAbout",
+  name: 'About',
   inheritAttrs: false, // disable 'non-props' warning
 };
 </script>
