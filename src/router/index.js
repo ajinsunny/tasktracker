@@ -1,17 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
-import AppHome from "../views/AppHome";
-import AppAbout from "../views/AppAbout";
+import AppHome from "../views/AppHome.vue";
 
 const routes = [
   {
     path: "/",
     name: "AppHome",
     component: AppHome,
-  },
-  {
-    path: "/about",
-    name: "AppAbout",
-    component: AppAbout,
+    props: (route) => ({ showAddTask: route.query.showAddTask === "true" }), // Pass the showAddTask prop here
   },
 ];
 
