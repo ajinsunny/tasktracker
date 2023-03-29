@@ -6,7 +6,7 @@
     </div>
     <div class="form-control">
       <label>Day & Time</label>
-      <input v-model.trim="day" type="text" placeholder="Add Day & Time" />
+      <input v-model.trim="date" type="text" placeholder="Add Day & Time" />
     </div>
     <div class="form-control form-control-check">
       <label>Set Reminder</label>
@@ -24,6 +24,7 @@ export default {
       text: "",
       day: "",
       reminder: false,
+      date: "",
     };
   },
   methods: {
