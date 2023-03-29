@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     async addTask(task) {
-      const res = await fetch("api/tasks", {
+      const res = await fetch("http://localhost:5000/tasks", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -42,7 +42,7 @@ export default {
     },
     async deleteTask(id) {
       if (confirm("Are you sure?")) {
-        const res = await fetch(`api/tasks/${id}`, {
+        const res = await fetch(`http://localhost:5000/tasks/${id}`, {
           method: "DELETE",
         });
 
